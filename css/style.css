@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins";
+  background-color: #f3f3f4;
+}
+
+.calculator-container {
+  width: 600px;
+  height: 600px;
+  background-color: #fcfcfc;
+  margin: 0 auto;
+  position: relative;
+  -webkit-box-shadow: 3px 3px 21px 5px rgba(0, 0, 0, 0.42);
+  box-shadow: 3px 3px 21px 5px rgba(0, 0, 0, 0.42);
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  display: -webkit-flex;
+}
+.calculator-container .title {
+  width: 300px;
+  height: 50px;
+  margin: 0 auto;
+  position: relative;
+  top: 50px;
+  background-color: #000000;
+  color: #FFFFFF;
+  border-radius: 15pt;
+}
+.calculator-container .title h1 {
+  text-align: center;
+  font-weight: 300;
+}
+.calculator-container .score-container {
+  width: 300px;
+  margin: 0 auto;
+  height: 40px;
+  position: relative;
+  top: 160px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.calculator-container .score-container #show-score {
+  margin: 0 auto;
+  width: 150px;
+  height: 60px;
+  font-size: 50px;
+  border: 1px solid grey;
+  text-align: center;
+}
+.calculator-container .score-container input::-webkit-outer-spin-button,
+.calculator-container .score-container input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.calculator-container .score-container input[type=number] {
+  -moz-appearance: textfield;
+  /* Firefox */
+}
+.calculator-container input[type=range] {
+  width: 330px;
+  position: relative;
+  top: 260px;
+  margin: 0 auto;
+  -webkit-appearance: none;
+  /* Hides the slider*/
+  background: #589fc9;
+  border-radius: 15pt;
+  height: 5px;
+}
+.calculator-container input[type=number]:focus {
+  border: 1px solid transparent;
+  outline: none;
+}
+.calculator-container .warning-message {
+  width: 300px;
+  height: 20px;
+  position: relative;
+  top: 200px;
+  margin: 0 auto;
+  text-align: center;
+  visibility: hidden;
+  overflow: hidden;
+  font-size: 14px;
+  color: red;
+}
+.calculator-container .weight-container {
+  width: 330px;
+  height: 30px;
+  margin: 0 auto;
+  position: relative;
+  top: 270px;
+  border-radius: 15pt;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+}
+.calculator-container .weight-container .underweight {
+  width: 110px;
+  height: 30px;
+  margin-right: 2px;
+  border-radius: 15pt;
+  font-size: 13px;
+  text-align: center;
+  padding-top: 5px;
+  color: #FFFFFF;
+  visibility: hidden;
+  letter-spacing: 1px;
+  background-color: #f74f4f;
+}
+.calculator-container .weight-container .normal {
+  width: 100px;
+  height: 30px;
+  margin-right: 2px;
+  border-radius: 15pt;
+  font-size: 13px;
+  text-align: center;
+  padding-top: 5px;
+  color: #FFFFFF;
+  visibility: hidden;
+  letter-spacing: 1px;
+  background-color: #45b27D;
+}
+.calculator-container .weight-container .overweight {
+  width: 100px;
+  height: 30px;
+  background-color: #000000;
+  border-radius: 15pt;
+  font-size: 13px;
+  text-align: center;
+  padding-top: 5px;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+  visibility: hidden;
+}
+.calculator-container .fas {
+  margin: 0 auto;
+  position: relative;
+  top: 350px;
+  color: #589fc9;
+}
+
+@media screen and (max-width: 417px) and (min-width: 360px) {
+  .calculator-container {
+    width: 355px;
+    height: 500px;
+    position: relative;
+    top: 40px;
+  }
+  .calculator-container .title {
+    position: relative;
+    top: 50px;
+    width: 280px;
+  }
+  .calculator-container .title h1 {
+    font-size: 23px;
+  }
+  .calculator-container .score-container {
+    position: relative;
+    top: 140px;
+  }
+  .calculator-container .score-container #show-score {
+    font-size: 40px;
+  }
+  .calculator-container input[type=range] {
+    width: 250px;
+    position: relative;
+    top: 210px;
+  }
+  .calculator-container .weight-container {
+    width: 270px;
+    position: relative;
+    top: 220px;
+  }
+  .calculator-container .weight-container .warning {
+    letter-spacing: 1px;
+    font-size: 11px;
+    padding-top: 8px;
+  }
+  .calculator-container .fa-paw {
+    position: relative;
+    top: 240px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
