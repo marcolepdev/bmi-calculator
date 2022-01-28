@@ -63,19 +63,20 @@ body {
   font-size: 30px;
   background-color: transparent;
   text-align: center;
-  border: 1px solid #f4f5f8;
   outline: none;
+  border: 1px solid #f4f5f8;
 }
-.calculator-container .score-container input::-webkit-outer-spin-button,
-.calculator-container .score-container input::-webkit-inner-spin-button {
+.calculator-container input::-webkit-outer-spin-button,
+.calculator-container input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.calculator-container .score-container input[type=number] {
+.calculator-container input[type=number] {
   -moz-appearance: textfield;
   /* Firefox */
 }
-.calculator-container input[type=range] {
+
+input[type=range] {
   width: 330px;
   position: relative;
   top: 260px;
@@ -86,11 +87,13 @@ body {
   border-radius: 15pt;
   height: 5px;
 }
-.calculator-container input[type=number]:focus {
+
+input[type=number]:focus {
   border: 1px solid #f4f5f8;
   outline: none;
 }
-.calculator-container .warning-message {
+
+.warning-message {
   width: 300px;
   height: 20px;
   position: relative;
@@ -102,7 +105,8 @@ body {
   font-size: 14px;
   color: red;
 }
-.calculator-container .weight-container {
+
+.weight-container {
   width: 330px;
   height: 30px;
   margin: 0 auto;
@@ -113,7 +117,7 @@ body {
   display: -webkit-flex;
   justify-content: space-between;
 }
-.calculator-container .weight-container .underweight {
+.weight-container .underweight {
   width: 110px;
   height: 30px;
   margin-right: 2px;
@@ -126,7 +130,7 @@ body {
   letter-spacing: 1px;
   background-color: #f74f4f;
 }
-.calculator-container .weight-container .normal {
+.weight-container .normal {
   width: 100px;
   height: 30px;
   margin-right: 2px;
@@ -139,7 +143,7 @@ body {
   letter-spacing: 1px;
   background-color: #45b27D;
 }
-.calculator-container .weight-container .overweight {
+.weight-container .overweight {
   width: 100px;
   height: 30px;
   background-color: #000000;
@@ -151,7 +155,8 @@ body {
   letter-spacing: 1px;
   visibility: hidden;
 }
-.calculator-container .fas {
+
+.fas {
   margin: 0 auto;
   position: relative;
   top: 320px;
