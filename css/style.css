@@ -42,33 +42,59 @@ body {
   margin: 0 auto;
   height: 40px;
   position: relative;
-  top: 160px;
+  top: 120px;
   align-items: center;
   justify-content: center;
   display: flex;
   flex-direction: column;
+}
+.calculator-container .score-container h3 {
+  font-weight: 300;
+  position: relative;
+  top: -10px;
 }
 .calculator-container .score-container #show-score {
   margin: 0 auto;
   width: 150px;
   height: 60px;
   font-size: 50px;
-  border: 1px solid grey;
   text-align: center;
 }
-.calculator-container .score-container input::-webkit-outer-spin-button,
-.calculator-container .score-container input::-webkit-inner-spin-button {
+.calculator-container .score-container .warning-message {
+  width: 300px;
+  height: 20px;
+  position: relative;
+  top: 180px;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+  font-size: 14px;
+  color: red;
+  display: block;
+}
+.calculator-container .fa-paw {
+  position: relative;
+  top: 20px;
+}
+.calculator-container input::-webkit-outer-spin-button,
+.calculator-container input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.calculator-container .score-container input[type=number] {
+.calculator-container input[type=number] {
   -moz-appearance: textfield;
   /* Firefox */
+  border: none;
+  outline: none;
+}
+.calculator-container input[type=number]:focus {
+  border: none;
+  outline: none;
 }
 .calculator-container input[type=range] {
   width: 330px;
   position: relative;
-  top: 260px;
+  top: 300px;
   margin: 0 auto;
   -webkit-appearance: none;
   /* Hides the slider*/
@@ -76,28 +102,12 @@ body {
   border-radius: 15pt;
   height: 5px;
 }
-.calculator-container input[type=number]:focus {
-  border: 1px solid transparent;
-  outline: none;
-}
-.calculator-container .warning-message {
-  width: 300px;
-  height: 20px;
-  position: relative;
-  top: 200px;
-  margin: 0 auto;
-  text-align: center;
-  visibility: hidden;
-  overflow: hidden;
-  font-size: 14px;
-  color: red;
-}
 .calculator-container .weight-container {
   width: 330px;
   height: 30px;
   margin: 0 auto;
   position: relative;
-  top: 270px;
+  top: 165px;
   border-radius: 15pt;
   display: flex;
   display: -webkit-flex;
@@ -150,7 +160,7 @@ body {
 
 @media screen and (max-width: 417px) and (min-width: 360px) {
   .calculator-container {
-    width: 355px;
+    width: 345px;
     height: 500px;
     position: relative;
     top: 40px;
@@ -159,6 +169,7 @@ body {
     position: relative;
     top: 50px;
     width: 280px;
+    height: 35px;
   }
   .calculator-container .title h1 {
     font-size: 23px;
@@ -168,7 +179,12 @@ body {
     top: 140px;
   }
   .calculator-container .score-container #show-score {
-    font-size: 40px;
+    font-size: 20px;
+    height: 35px;
+    width: 80px;
+  }
+  .calculator-container .warning-message {
+    top: 175px;
   }
   .calculator-container input[type=range] {
     width: 250px;
@@ -184,10 +200,6 @@ body {
     letter-spacing: 1px;
     font-size: 11px;
     padding-top: 8px;
-  }
-  .calculator-container .fa-paw {
-    position: relative;
-    top: 240px;
   }
 }
 

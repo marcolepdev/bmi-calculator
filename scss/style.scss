@@ -54,66 +54,82 @@ body {
         margin: 0 auto;
         height:40px;
         position: relative;
-        top:160px;
+        top:120px;
         align-items: center;
         justify-content: center;
         display: flex;
         flex-direction: column;
+
+        h3{
+            font-weight: 300;
+            position: relative;
+            top:-10px;
+        }
 
                #show-score{
                margin:0 auto;
                width:150px;
                height:60px;
                font-size: 50px;
-               border:1px solid grey;
                text-align: center;
                }
 
+               .warning-message{
+                width:300px;
+                height:20px;
+                position: relative;
+                top:180px;
+                margin: 0 auto;
+                text-align: center;
+                overflow: hidden;
+                font-size: 14px;
+                color:red;
+                display: block;
+            }
+                            
+         
+                }
+                
 
+             .fa-paw{
+                 position: relative;
+                 top:20px;
+             }   
+
+                            
                //INPUT SECTION
 
                input::-webkit-outer-spin-button, //removes the arrows 
-                input::-webkit-inner-spin-button {
-               -webkit-appearance: none;
-                margin: 0;
-                }
+               input::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+               margin: 0;
+               }
 
-                input[type=number] {
-                    -moz-appearance:textfield; /* Firefox */
-                }
+               input[type=number] {
+                   -moz-appearance:textfield; /* Firefox */
+                   border:none;
+                   outline:none;
+               }
 
-                              
-
-                }
+               input[type=number]:focus{
+                   border:none;
+                   outline:none;
+               }
  
             input[type=range]{
             width:330px;
             position: relative;
-            top:260px;
+            top:300px;
             margin: 0 auto;
             -webkit-appearance: none; /* Hides the slider*/
             background: $blue;
             border-radius: 15pt;
             height:5px;
                             }
-input[type=number]:focus{
-    border:1px solid transparent;
-    outline:none;
-}
-
-                            .warning-message{
-                                width:300px;
-                                height:20px;
-                                position: relative;
-                                top:200px;
-                                margin: 0 auto;
-                                text-align: center;
-                                visibility: hidden;
-                                overflow: hidden;
-                                font-size: 14px;
-                                color:red;
-                            }
                             
+
+
+
   // WEIGHT CONTAINER
 
             .weight-container{
@@ -121,7 +137,7 @@ input[type=number]:focus{
                 height:30px;
                 margin: 0 auto;
                 position: relative;
-                top:270px;
+                top:165px;
                 border-radius: 15pt;
                 display: flex;
                 display: -webkit-flex;
@@ -182,12 +198,14 @@ input[type=number]:focus{
           color:$blue;
         
         }
+
+        
 }
 
 
 @media screen and (max-width:417px) and (min-width:360px){
     .calculator-container{
-        width:355px;
+        width:345px;
         height:500px;
         position: relative;
         top:40px;
@@ -196,6 +214,7 @@ input[type=number]:focus{
             position: relative;
             top:50px;
             width:280px;
+            height: 35px;
 
             h1{
                 font-size: 23px;
@@ -207,8 +226,14 @@ input[type=number]:focus{
             top:140px;
 
             #show-score{
-                font-size: 40px;
+                font-size: 20px;
+                height:35px;
+                width:80px;
             }
+        }
+
+        .warning-message{
+            top:175px;
         }
 
         input[type=range]{
@@ -228,14 +253,9 @@ input[type=number]:focus{
                     font-size: 11px;
                     padding-top: 8px;
                 }
-        }
+        }   
+    }
 
-        
-    .fa-paw{
-        position: relative;
-        top:240px;
-    }
-        
-    }
     
 }
+
