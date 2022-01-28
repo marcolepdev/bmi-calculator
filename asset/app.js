@@ -109,7 +109,7 @@ showScore.addEventListener('input', (e)=>{
 
         //what happens if the value is below 30
        if(showScore.value >=0.01 && showScore.value <30){
-           showScore.style.border ="1px solid transparent"
+           showScore.style.border ="1px solid #f4f5f8"
            underWeight.style.visibility = "visible";
            normalWeight.style.visibility = "hidden";
            overWeight.style.visibility = "hidden";
@@ -117,7 +117,7 @@ showScore.addEventListener('input', (e)=>{
    
            //what happens if the value is between 30 and 90
        } else if(showScore.value >=30 && showScore.value < 90){
-        showScore.style.border = "1px solid transparent";
+        showScore.style.border = "1px solid #f4f5f8";
            normalWeight.style.visibility = "visible";
            overWeight.style.visibility = "hidden";
            underWeight.style.visibility = "hidden";
@@ -125,7 +125,7 @@ showScore.addEventListener('input', (e)=>{
    
            //what happens if the value is equal or over 90
        } else if(showScore.value >=90){
-        showScore.style.border = "1px solid transparent";
+        showScore.style.border = "1px solid #f4f5f8";
            overWeight.style.visibility = "visible";
            normalWeight.style.visibility = "hidden";
            underWeight.style.visibility = "hidden";
