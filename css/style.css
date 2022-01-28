@@ -13,13 +13,14 @@ body {
 .calculator-container {
   width: 600px;
   height: 600px;
-  background-color: #fcfcfc;
+  background-image: linear-gradient(to top, #c2e59c, #64b3f4);
   margin: 0 auto;
   position: relative;
   -webkit-box-shadow: 3px 3px 21px 5px rgba(0, 0, 0, 0.42);
   box-shadow: 3px 3px 21px 5px rgba(0, 0, 0, 0.42);
   top: 100px;
   display: flex;
+  border-radius: 15pt;
   flex-direction: column;
   display: -webkit-flex;
 }
@@ -29,72 +30,55 @@ body {
   margin: 0 auto;
   position: relative;
   top: 50px;
-  background-color: #000000;
-  color: #FFFFFF;
+  border: 2px solid #000000;
+  color: #000000;
   border-radius: 15pt;
 }
 .calculator-container .title h1 {
   text-align: center;
   font-weight: 300;
 }
+.calculator-container h2 {
+  color: #000000;
+  text-align: center;
+  position: relative;
+  font-weight: 300;
+  top: 100px;
+}
 .calculator-container .score-container {
   width: 300px;
   margin: 0 auto;
   height: 40px;
   position: relative;
-  top: 120px;
+  top: 160px;
   align-items: center;
   justify-content: center;
   display: flex;
   flex-direction: column;
 }
-.calculator-container .score-container h3 {
-  font-weight: 300;
-  position: relative;
-  top: -10px;
-}
 .calculator-container .score-container #show-score {
   margin: 0 auto;
-  width: 150px;
+  width: 110px;
   height: 60px;
-  font-size: 50px;
+  font-size: 30px;
+  background-color: transparent;
   text-align: center;
+  border: 1px solid #f4f5f8;
+  outline: none;
 }
-.calculator-container .score-container .warning-message {
-  width: 300px;
-  height: 20px;
-  position: relative;
-  top: 180px;
-  margin: 0 auto;
-  text-align: center;
-  overflow: hidden;
-  font-size: 14px;
-  color: red;
-  display: block;
-}
-.calculator-container .fa-paw {
-  position: relative;
-  top: 20px;
-}
-.calculator-container input::-webkit-outer-spin-button,
-.calculator-container input::-webkit-inner-spin-button {
+.calculator-container .score-container input::-webkit-outer-spin-button,
+.calculator-container .score-container input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.calculator-container input[type=number] {
+.calculator-container .score-container input[type=number] {
   -moz-appearance: textfield;
   /* Firefox */
-  border: none;
-  outline: none;
-}
-.calculator-container input[type=number]:focus {
-  border: none;
-  outline: none;
 }
 .calculator-container input[type=range] {
   width: 330px;
   position: relative;
-  top: 300px;
+  top: 260px;
   margin: 0 auto;
   -webkit-appearance: none;
   /* Hides the slider*/
@@ -102,12 +86,28 @@ body {
   border-radius: 15pt;
   height: 5px;
 }
+.calculator-container input[type=number]:focus {
+  border: 1px solid #f4f5f8;
+  outline: none;
+}
+.calculator-container .warning-message {
+  width: 300px;
+  height: 20px;
+  position: relative;
+  top: 200px;
+  margin: 0 auto;
+  text-align: center;
+  visibility: hidden;
+  overflow: hidden;
+  font-size: 14px;
+  color: red;
+}
 .calculator-container .weight-container {
   width: 330px;
   height: 30px;
   margin: 0 auto;
   position: relative;
-  top: 165px;
+  top: 270px;
   border-radius: 15pt;
   display: flex;
   display: -webkit-flex;
@@ -154,14 +154,14 @@ body {
 .calculator-container .fas {
   margin: 0 auto;
   position: relative;
-  top: 350px;
+  top: 320px;
   color: #589fc9;
 }
 
 @media screen and (max-width: 417px) and (min-width: 360px) {
   .calculator-container {
     width: 345px;
-    height: 500px;
+    height: 600px;
     position: relative;
     top: 40px;
   }
@@ -172,34 +172,43 @@ body {
     height: 35px;
   }
   .calculator-container .title h1 {
-    font-size: 23px;
+    font-size: 20px;
   }
   .calculator-container .score-container {
     position: relative;
-    top: 140px;
+    top: 160px;
   }
   .calculator-container .score-container #show-score {
-    font-size: 20px;
-    height: 35px;
+    font-size: 40px;
     width: 80px;
+    font-size: 20px;
   }
   .calculator-container .warning-message {
-    top: 175px;
+    position: relative;
+    top: 220px;
   }
   .calculator-container input[type=range] {
     width: 250px;
     position: relative;
-    top: 210px;
+    top: 290px;
   }
   .calculator-container .weight-container {
     width: 270px;
     position: relative;
-    top: 220px;
+    top: 300px;
   }
   .calculator-container .weight-container .warning {
     letter-spacing: 1px;
     font-size: 11px;
     padding-top: 8px;
+  }
+  .calculator-container .fa-paw {
+    position: relative;
+    top: 350px;
+  }
+  .calculator-container .fa-paw:before {
+    content: "\f1b0";
+    font-size: 40px;
   }
 }
 

@@ -1,18 +1,14 @@
-//Variables
-
-let inputRange = document.querySelector('#inputrange');
+const inputRange = document.querySelector('#inputrange');
 let showScore = document.querySelector('#show-score');
-let normalWeight = document.querySelector('.normal');
-let underWeight = document.querySelector('.underweight');
-let overWeight = document.querySelector('.overweight');
-let dogIcon = document.querySelector('.fa-paw');
+const normalWeight = document.querySelector('.normal');
+const underWeight = document.querySelector('.underweight');
+const overWeight = document.querySelector('.overweight');
+const dogIcon = document.querySelector('.fa-paw');
+showScore.innerHTML = 0;
 let scoreContainer = document.querySelector('.score-container');
-let warnMessage = document.querySelector('.warning-message');
-let fatDog = document.querySelector('#overweight-dog');
-let regularDog = document.querySelector('#regular-dog');
-let underweightDog = document.querySelector('#underweight-dog');
+const warnMessage = document.querySelector('.warning-message');
 
-showScore.value= 0; 
+ 
 //function triggers when the user moves the range bar on the smartphone
 
 inputRange.addEventListener('touchmove', (e)=>{
@@ -26,37 +22,30 @@ inputRange.addEventListener('touchmove', (e)=>{
        underWeight.style.visibility = "visible";
        normalWeight.style.visibility = "hidden";
        overWeight.style.visibility = "hidden";
-       fatDog.style.visibility = 'hidden';
-       regularDog.style.visibility = 'hidden';
-       underweightDog.style.visibility = 'visible';
+       dogIcon.style.color = "#f74f4f";
 
        //what happens if the value is between 30 and 90
    } else if(valueScore >=30 && valueScore < 90){
        normalWeight.style.visibility = "visible";
        overWeight.style.visibility = "hidden";
        underWeight.style.visibility = "hidden";
-       fatDog.style.visibility = 'hidden';
-       regularDog.style.visibility = 'visible';
-       underweightDog.style.visibility = 'hidden';
+       dogIcon.style.color="#45b27D";
 
        //what happens if the value is equal or over 90
    } else if(valueScore >=90){
        overWeight.style.visibility = "visible";
        normalWeight.style.visibility = "hidden";
        underWeight.style.visibility = "hidden";
-       fatDog.style.visibility = 'visible';
-       regularDog.style.visibility = 'hidden';
-       underweightDog.style.visibility = 'hidden';
+       dogIcon.style.color = "#000000";
        
-   } else if (valueScore == 0){
+   } else if(valueScore == 0 || valueScore ==""){
 
        //what happens if the value is equal to 0 (kind of reset function)
+       inputRange.value = 0;
        overWeight.style.visibility = "hidden";
        normalWeight.style.visibility = "hidden";
        underWeight.style.visibility = "hidden";
-       fatDog.style.visibility = 'hidden';
-       regularDog.style.visibility = 'hidden';
-       underweightDog.style.visibility = 'hidden';
+       dogIcon.style.color = "#589fc9";
    }
 })
 
@@ -68,44 +57,37 @@ inputRange.addEventListener('mousemove', (e)=>{
     //showing the value on the screen
     showScore.value = valueScore;
 
+    warnMessage.style.visibility = 'hidden';
     //what happens if the value is below 30
    if(valueScore >=0.01 && valueScore <30){
        underWeight.style.visibility = "visible";
        normalWeight.style.visibility = "hidden";
        overWeight.style.visibility = "hidden";
-       fatDog.style.visibility = 'hidden';
-       regularDog.style.visibility = 'hidden';
-       underweightDog.style.visibility = 'visible';
+       dogIcon.style.color = "#f74f4f";
 
        //what happens if the value is between 30 and 90
    } else if(valueScore >=30 && valueScore < 90){
        normalWeight.style.visibility = "visible";
        overWeight.style.visibility = "hidden";
        underWeight.style.visibility = "hidden";
-       fatDog.style.visibility = 'hidden';
-       regularDog.style.visibility = 'visible';
-       underweightDog.style.visibility = 'hidden';
+       dogIcon.style.color="#45b27D";
 
        //what happens if the value is equal or over 90
    } else if(valueScore >=90){
        overWeight.style.visibility = "visible";
        normalWeight.style.visibility = "hidden";
        underWeight.style.visibility = "hidden";
- 
-       fatDog.style.visibility = 'visible';
-       regularDog.style.visibility = 'hidden';
-       underweightDog.style.visibility = 'hidden';
+       dogIcon.style.color = "#000000";
        
-   } else if (valueScore == 0){
+   } else if (valueScore == 0 || valueScore == ""){
 
        //what happens if the value is equal to 0 (kind of reset function)
-       showScore.value = 0;
+       inputRange.value = 0;
        overWeight.style.visibility = "hidden";
        normalWeight.style.visibility = "hidden";
        underWeight.style.visibility = "hidden";
-       fatDog.style.visibility = 'hidden';
-       regularDog.style.visibility = 'hidden';
-       underweightDog.style.visibility = 'hidden';
+       dogIcon.style.color = "#589fc9";
+
    }
 })
 
@@ -115,62 +97,54 @@ inputRange.addEventListener('mousemove', (e)=>{
 
 
 
-
+showScore.value= 0;
 
 showScore.addEventListener('input', (e)=>{
         
 
         if(showScore.value > 120){
             warnMessage.style.visibility = 'visible';
-            warnMessage.innerHTML = "Values accepted: 0 to 120";
-            showScore.style.border = "2px solid red";
+            warnMessage.innerHTML = "Only values accepted: 0 to 120";
+            showScore.style.border = "1px solid red";
             showScore.value = showScore.value/10 ^0;
         }else {
-            warnMessage.style.visibility = 'hidden';
+        warnMessage.style.visibility = 'hidden';
         showScore.value = e.target.value;
         inputRange.value = showScore.value;
 
         //what happens if the value is below 30
        if(showScore.value >=0.01 && showScore.value <30){
-        showScore.style.border = "1px solid transparent";
+        showScore.style.border = "1px solid #f9f9f9";
            underWeight.style.visibility = "visible";
            normalWeight.style.visibility = "hidden";
            overWeight.style.visibility = "hidden";
-           fatDog.style.visibility = 'hidden';
-           regularDog.style.visibility = 'hidden';
-           underweightDog.style.visibility = 'visible';
+           dogIcon.style.color = "#f74f4f";
    
            //what happens if the value is between 30 and 90
        } else if(showScore.value >=30 && showScore.value < 90){
-        showScore.style.border = "1px solid transparent";
+        showScore.style.border = "1px solid #f9f9f9";
            normalWeight.style.visibility = "visible";
            overWeight.style.visibility = "hidden";
            underWeight.style.visibility = "hidden";
-           fatDog.style.visibility = 'hidden';
-           regularDog.style.visibility = 'visible';
-           underweightDog.style.visibility = 'hidden';
+           dogIcon.style.color="#45b27D";
    
            //what happens if the value is equal or over 90
        } else if(showScore.value >=90){
-        showScore.style.border = "1px solid transparent";
+        showScore.style.border = "1px solid #f9f9f9";
            overWeight.style.visibility = "visible";
            normalWeight.style.visibility = "hidden";
            underWeight.style.visibility = "hidden";
-           fatDog.style.visibility = 'visible';
-           regularDog.style.visibility = 'hidden';
-           underweightDog.style.visibility = 'hidden';
+           dogIcon.style.color = "#000000";
            
-       } else if (showScore.value == ""){
+       } else if(showScore.value == 0 || showScore.value == ""){
    
            //what happens if the value is equal to 0 (kind of reset function)
-           valueScore = 0;
-           showScore.value = 0;
-           overWeight.style.visibility = "hidden";
+           inputRange.value = "0";
+
+            overWeight.style.visibility = "hidden";
            normalWeight.style.visibility = "hidden";
            underWeight.style.visibility = "hidden";
-           fatDog.style.visibility = 'hidden';
-           regularDog.style.visibility = 'hidden';
-           underweightDog.style.visibility = 'hidden';
+           dogIcon.style.color = "#589fc9";
        }
     }}
 )
