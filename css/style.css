@@ -1,3 +1,4 @@
+/* import Poppins Font*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 * {
   margin: 0;
@@ -25,18 +26,19 @@ body {
   display: -webkit-flex;
 }
 .calculator-container .title {
-  width: 300px;
-  height: 50px;
+  width: 270px;
+  height: 40px;
   margin: 0 auto;
   position: relative;
-  top: 50px;
-  border: 2px solid #000000;
+  top: 35px;
+  border: 1px solid #000000;
   color: #000000;
   border-radius: 15pt;
 }
 .calculator-container .title h1 {
   text-align: center;
-  font-weight: 300;
+  font-weight: 400;
+  font-size: 25px;
 }
 .calculator-container h2 {
   color: #000000;
@@ -168,16 +170,18 @@ input[type=number]:focus {
     width: 345px;
     height: 600px;
     position: relative;
-    top: 40px;
+    top: 20px;
   }
   .calculator-container .title {
     position: relative;
-    top: 50px;
-    width: 280px;
+    top: 25px;
+    width: 210px;
     height: 35px;
+    border: 1px solid black;
   }
   .calculator-container .title h1 {
     font-size: 20px;
+    font-weight: 400;
   }
   .calculator-container .score-container {
     position: relative;
