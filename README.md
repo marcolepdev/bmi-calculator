@@ -1,8 +1,16 @@
 ## BMI calculator
 
 ## Table of Contents
+- App Preview
+- Information about the App
+- Technologies used
+- How it works
 
-### Information about the App 
+### App Preview  
+
+![App preview](../main/images/bmi-preview.jpg)
+
+### Information about the app 
 This small application is widget component that allows the user to see and check if their own pet is underweight, normalwet and overweight.
 
 
